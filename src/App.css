@@ -15,27 +15,36 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: calc(100% - 26px);
+	height: calc(100% - 41px);
 }
 
 .row {
 	display: flex;
-	flex-direction: column;
 	gap: 8px;
+	margin-bottom: 8px;
 }
 
 h1 {
 	margin: 0;
 }
 
-p {
-	display: flex;
-	gap: 8px;
-	margin-bottom: 8px;
-}
-
 span {
-	border: 2px solid grey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid grey;
 	width: 100px;
 	height: 100px;
+	font-size: 40px;
+}
+
+/* TOP NAV */
+nav {
+	padding: 5px 10px;
+	border-bottom: 1px solid greenyellow;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
 }

@@ -1,5 +1,6 @@
 import "./App.css";
 import GameBoard from "./components/GameBoard";
+import TopNav from "./components/TopNav";
 import useDarkMode from "./hooks/useDarkMode";
 
 function App() {
@@ -12,13 +13,15 @@ function App() {
 
 	return (
 		<div className="app" data-theme={theme}>
-			<button onClick={toggleTheme}>
-				{theme === "dark" ? "light" : "dark"}
-			</button>
-			<h1>Night Moves</h1>
+			<TopNav theme={theme} toggleTheme={toggleTheme} />		
 			<GameBoard />
 		</div>
 	);
 }
 
 export default App;
+
+// TODO
+// - styling
+// - game logic
+// - hard mode

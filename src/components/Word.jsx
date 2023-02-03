@@ -3,7 +3,7 @@ import Letter from "./Letter";
 
 function Word({ word }) {
 	return (
-		<p>
+		<p className="row">
 			{range(0,4).map(num => (
 				<Letter key={num} word={word} num={num} />
 			))}
