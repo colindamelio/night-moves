@@ -1,11 +1,18 @@
-import { range } from "../utils/helpers";
+import { range, check } from "../utils/helpers";
 import Letter from "./Letter";
 
-function Word({ word }) {
+function Word({ word, answer }) {
+	const guess = word?.value;
+	const result = check(guess, answer);
+
 	return (
 		<p className="row">
-			{range(0,4).map(num => (
-				<Letter key={num} word={word} num={num} />
+			{range(0, 4).map((num) => (
+				<Letter
+					key={num}
+					letter={result ? result[num].letter : null}
+					status={result ? result[num].status : null}
+				/>
 			))}
 		</p>
 	);

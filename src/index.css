@@ -1,12 +1,20 @@
 :root {
-  --background: white;
+  --background: #fff;
   --text-primary: black;
+	--border: #9d9d9e;
 }
 
 [data-theme='dark'] {
-  --background: black;
-  --text-primary: white;
+  --background: #121213;
+  --text-primary: #fff;
+	---boder: #7f7f7f;
 }
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 body {
   margin: 0;

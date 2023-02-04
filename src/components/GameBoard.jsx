@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { answer } from "../data/words";
 import WordGrid from "./WordGrid";
 import WordInput from "./WordInput";
 
@@ -12,9 +13,10 @@ function GameBoard() {
 		}
 		setGuessedWords([...guessedWords, newGuessedWords]);
 	};
+
 	return (
 		<main>
-			<WordGrid guessedWords={guessedWords} />
+			<WordGrid guessedWords={guessedWords} answer={answer} />
 			<WordInput handleSubmittedGuess={handleSubmittedGuess} />
 		</main>
 	);

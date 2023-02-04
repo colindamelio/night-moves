@@ -1,11 +1,5 @@
-function Letter({word, num}) {
-	return (
-		<span>
-			{
-				word?.value ? word.value[num] : null
-			}
-		</span>
-	)
+function Letter({ letter, status }) {
+	return <span className={letter ? "active" : ""}>{letter}</span>;
 }
 
 export default Letter;

@@ -13,10 +13,11 @@ function WordInput({ handleSubmittedGuess }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<label htmlFor="word-input">Guess A Word:</label>
+			<label className="sr-only" htmlFor="word-input">Guess A Word:</label>
 			<input
 				id="word-input"
 				type="text"
+				placeholder="pick a word..."
 				maxLength={5}
 				minLength={5}
 				value={input}
