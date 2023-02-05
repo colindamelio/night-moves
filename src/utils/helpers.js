@@ -8,18 +8,27 @@ export const range = (start, stop, step = 1) => {
 
 // compare guessed word with answer
 // provide comparison of each letter to return a correct/incorrect status
-export const check = (guess, answer) => {
+export function check(guess, answer) {
 	if (!guess) return;
 
-	const guessLetters = guess.split("");
-	const answerLetters = new Set(answer.split(""));
+	let splitGuess = guess.split("");
+	let splitAnswer = answer.split("");
 
-	return guessLetters.map((letter) => ({
-		letter,
-		status: answerLetters.has(letter)
-			? "correct"
-			: answer.includes(letter)
-			? "misplaced"
-			: "incorrect",
-	}));
-};
+	return splitGuess.map((letter) => {
+		let status;
+
+		if (splitAnswer.includes(letter)) {
+			if (splitAnswer.indexOf(letter) === splitGuess.indexOf(letter)) {
+				status = "correct";
+			} else {
+				status = "mismatch";
+			}
+		} else {
+			status = "incorrect";
+		}
+		return {
+			letter,
+			status,
+		};
+	});
+}

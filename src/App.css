@@ -3,7 +3,7 @@
 		bottom: -0.2em;
 		opacity: 1;
 	}
-	
+
 	50% {
 		bottom: 0.2em;
 	}
@@ -16,14 +16,14 @@
 
 .app {
 	height: 100vh;
-  color: var(--text-primary);
-  background-color: var(--background);
-  transition: all .5s;
+	color: var(--text-primary);
+	background-color: var(--background);
+	transition: all 0.5s;
 }
 button {
-  color: var(--text-primary);
-  background-color: var(--background);
-  transition: all .5s;
+	color: var(--text-primary);
+	background-color: var(--background);
+	transition: all 0.5s;
 }
 
 main {
@@ -51,9 +51,7 @@ span {
 	border: 3px solid var(--border);
 	width: 100px;
 	height: 100px;
-	font-size: 40px;
-	font-family: 'Itim', cursive;
-	
+	font-size: 65px;
 }
 
 span.active {
@@ -61,14 +59,25 @@ span.active {
 	animation: move-text-color 0.25s forwards;
 	bottom: -1em;
 	opacity: 0;
-	background-color: #d3d6da;
+	background-color: #787c7e;
+	border-color: #787c7e;
 	color: #fff;
+}
+
+span.correct {
+	background-color: #6aaa64;
+	border-color: #6aaa64;
+}
+
+span.mismatch {
+	background-color: #c9b458;
+	border-color: #c9b458;
 }
 
 /* TOP NAV */
 nav {
 	padding: 5px 10px;
-	border-bottom: 1px solid greenyellow;
+	border-bottom: 1px solid #adadad;
 }
 
 nav ul {
@@ -80,15 +89,6 @@ input {
 	padding: 15px;
 	font-size: 25px;
 	border-radius: 2px;
-	border: 0;
+	border: 2px solid #adadad;
+	width: 100%;
 }
-
-.correct {
-	background-color: #6aaa64;
-}
-
-.misplaced {
-	background-color: #c9b458;
-}
-
-/* #787c7e */

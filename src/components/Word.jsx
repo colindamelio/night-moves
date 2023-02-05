@@ -1,7 +1,8 @@
 import { range, check } from "../utils/helpers";
+import { answer } from "../data/words";
 import Letter from "./Letter";
 
-function Word({ word, answer }) {
+function Word({ word }) {
 	const guess = word?.value;
 	const result = check(guess, answer);
 

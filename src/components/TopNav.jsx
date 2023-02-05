@@ -1,4 +1,4 @@
-function TopNav({theme, toggleTheme}) {
+function TopNav({ theme, toggleTheme }) {
 	return (
 		<nav>
 			<ul>

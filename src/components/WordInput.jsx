@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function WordInput({ handleSubmittedGuess }) {
-	const [input, setInput] = useState('');
+	const [input, setInput] = useState("");
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -13,7 +13,9 @@ function WordInput({ handleSubmittedGuess }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<label className="sr-only" htmlFor="word-input">Guess A Word:</label>
+			<label className="sr-only" htmlFor="word-input">
+				Guess A Word:
+			</label>
 			<input
 				id="word-input"
 				type="text"
