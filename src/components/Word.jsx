@@ -1,4 +1,4 @@
-import { range, check } from "../utils/helpers";
+import { range, check } from "../toolbox/helpers";
 import { answer } from "../data/words";
 import Letter from "./Letter";
 

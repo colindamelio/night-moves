@@ -20,28 +20,20 @@
 	background-color: var(--background);
 	transition: all 0.5s;
 }
-button {
-	color: var(--text-primary);
-	background-color: var(--background);
-	transition: all 0.5s;
-}
 
 main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: calc(100% - 41px);
+	height: calc(100% - 47px);
 }
 
+/* WordGrid */
 .row {
 	display: flex;
 	gap: 8px;
 	margin-bottom: 8px;
-}
-
-h1 {
-	margin: 0;
 }
 
 span {
@@ -74,7 +66,7 @@ span.mismatch {
 	border-color: #c9b458;
 }
 
-/* TOP NAV */
+/* TopNav */
 nav {
 	padding: 5px 10px;
 	border-bottom: 1px solid #adadad;
@@ -85,6 +77,20 @@ nav ul {
 	justify-content: space-between;
 }
 
+h1 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+nav button {
+	border: 0;
+	cursor: pointer;
+	color: var(--text-primary);
+	background-color: var(--background);
+	transition: all 0.5s;
+}
+
+/* WordInput */
 input {
 	padding: 15px;
 	font-size: 25px;

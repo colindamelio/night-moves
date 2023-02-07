@@ -1,5 +1,5 @@
 import Word from "./Word";
-import { range } from "../utils/helpers";
+import { range } from "../toolbox/helpers";
 
 function WordGrid({ guessedWords }) {
 	return (

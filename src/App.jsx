@@ -13,15 +13,10 @@ function App() {
 
 	return (
 		<div className="app" data-theme={theme}>
-			<TopNav theme={theme} toggleTheme={toggleTheme} />		
+			<TopNav theme={theme} toggleTheme={toggleTheme} />
 			<GameBoard />
 		</div>
 	);
 }
 
 export default App;
-
-// TODO
-// - styling
-// - game logic
-// - hard mode
