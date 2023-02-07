@@ -15,9 +15,9 @@ function GameBoard() {
 
 	return (
 		<main>
-			<div className="wrapper">
-				<WordGrid guessedWords={guessedWords} />
-				<WordInput handleSubmittedGuess={handleSubmittedGuess} />
+			<div className="gameWrapper">
+			<WordGrid guessedWords={guessedWords} />
+			<WordInput handleSubmittedGuess={handleSubmittedGuess} />
 			</div>
 		</main>
 	);
