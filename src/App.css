@@ -37,20 +37,26 @@ main {
 
 /* WordGrid */
 .row {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-gap: 8px;
-	text-align: center;
-	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	height: 77px	;
+	gap: 8px;
+}
+
+@media (max-width: 550px) {
+	.row {
+		height: 70px;
+		gap: 4px;
+	}
 }
 
 span {
 	border: 3px solid var(--border);
-	font-size: 65px;
+	font-size: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 75px;
+	width: 100%;
 }
 
 span.active {
@@ -75,7 +81,7 @@ span.mismatch {
 
 @media (max-width: 550px) {
 	span {
-		font-size: 40px;
+		font-size: 25px;
 	}
 }
 
