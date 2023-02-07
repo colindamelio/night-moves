@@ -73,7 +73,7 @@ span.mismatch {
 	border-color: #c9b458;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
 	span {
 		font-size: 40px;
 	}
