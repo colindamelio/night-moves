@@ -1,23 +1,45 @@
 import { useState } from "react";
+import { words, getRandomAnswer } from "../data/words";
+import Banner from "./Banner";
 import WordGrid from "./WordGrid";
 import WordInput from "./WordInput";
 
 function GameBoard() {
+	const [answer, setAnswer] = useState(getRandomAnswer(words));
 	const [guessedWords, setGuessedWords] = useState([]);
+	const [progress, setProgress] = useState("playing");
 
 	const handleSubmittedGuess = (guess) => {
-		const newGuessedWords = {
-			value: guess,
-			id: crypto.randomUUID(),
-		};
-		setGuessedWords([...guessedWords, newGuessedWords]);
+		const newGuessedWords = [...guessedWords, guess];
+		setGuessedWords(newGuessedWords);
+
+		if (guess === answer) {
+			setProgress("won");
+		}
+
+		if (newGuessedWords.length >= 6) {
+			setProgress("lost");
+		}
+	};
+
+	const handleReset = () => {
+		setProgress("playing");
+		setGuessedWords([]);
+		const newAnswer = getRandomAnswer(words);
+		setAnswer(newAnswer);
 	};
 
 	return (
 		<main>
+			{progress !== "playing" && (
+				<Banner progress={progress} handleReset={handleReset} />
+			)}
 			<div className="gameWrapper">
-			<WordGrid guessedWords={guessedWords} />
-			<WordInput handleSubmittedGuess={handleSubmittedGuess} />
+				<WordGrid guessedWords={guessedWords} answer={answer} />
+				<WordInput
+					handleSubmittedGuess={handleSubmittedGuess}
+					progress={progress}
+				/>
 			</div>
 		</main>
 	);

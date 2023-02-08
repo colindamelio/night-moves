@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function WordInput({ handleSubmittedGuess }) {
+function WordInput({ handleSubmittedGuess, progress }) {
 	const [input, setInput] = useState("");
 
 	const handleSubmit = (e) => {
@@ -24,6 +24,7 @@ function WordInput({ handleSubmittedGuess }) {
 				minLength={5}
 				value={input}
 				onChange={(e) => setInput(e.target.value.toUpperCase())}
+				disabled={progress !== 'playing'}
 			/>
 		</form>
 	);

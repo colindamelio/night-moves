@@ -39,7 +39,7 @@ main {
 .row {
 	display: flex;
 	justify-content: space-between;
-	height: 77px	;
+	height: 77px;
 	gap: 8px;
 }
 
@@ -117,4 +117,37 @@ input {
 	border-radius: 2px;
 	border: 2px solid #adadad;
 	width: 100%;
+}
+
+@keyframes register-notify {
+	0% {
+		top: -100px;
+	}
+	40% {
+		opacity: 1;
+		top: 100px;
+	}
+	60% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		top: 100px;
+	}
+}
+
+.banner-box {
+	display: block;
+	position: absolute;
+	opacity: 0;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 2;
+	animation-name: register-notify;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.56, 1.38);
+	animation-duration: 2700ms;
+	animation-fill-mode: forwards;
 }

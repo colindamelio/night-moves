@@ -37,8 +37,8 @@ export const words = [
 	"ANGEL",
 ];
 
-function getRandomAnswer(array) {
+export function getRandomAnswer(array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
-export const answer = getRandomAnswer(words);
+
