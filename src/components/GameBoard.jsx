@@ -15,9 +15,7 @@ function GameBoard() {
 
 		if (guess === answer) {
 			setProgress("won");
-		}
-
-		if (newGuessedWords.length >= 6) {
+		} else if (newGuessedWords.length >= 6) {
 			setProgress("lost");
 		}
 	};
